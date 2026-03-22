@@ -1,7 +1,7 @@
 class Node:
-    def __init__(self, data, next=None):
+    def __init__(self, data, next_n=None):
         self.data = data
-        self.next = next
+        self.next = next_n
 
 def linked_list_from_string(list_repr: str) -> Node | None:
     list_repr = list_repr.replace('-> None', '')
