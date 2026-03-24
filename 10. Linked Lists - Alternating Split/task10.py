@@ -9,12 +9,11 @@ class Context(object):
         self.second = second
 
 def alternating_split(head):
+    if not head.next:
+        raise ValueError('splitting a single node')
     head2 = head.next
     node1 = head
-    if node1.next:
-        node2 = node1.next
-    else:
-        raise ValueError('splitting a single node')
+    node2 = node1.next
     while node1 and node2:
         node1.next = node2.next
         try:
